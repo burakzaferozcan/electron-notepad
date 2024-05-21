@@ -1,0 +1,43 @@
+{
+  "name": "notepad",
+  "version": "1.0.0",
+  "description": "A simple Notepad app built with Electron",
+  "author": "Your Name",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.notepad",
+    "productName": "Notepad",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "mac": {
+      "category": "Productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "category": "Utility",
+      "target": [
+        "deb",
+        "rpm",
+        "AppImage",
+        "snap"
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^30.0.6",
+    "electron-builder": "^24.13.3"
+  }
+}
